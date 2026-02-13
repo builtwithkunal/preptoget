@@ -1,0 +1,236 @@
+.assessment-container {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f8;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* SKILL SELECTION */
+.skill-select {
+  text-align: center;
+}
+
+.skill-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-buttons button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+/* QUESTIONS */
+.question-section {
+  max-width: 700px;
+  margin: auto;
+}
+
+.question-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.question-card input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* SUBMIT */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* RESULT */
+.result-card {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.result-card h1 {
+  font-size: 48px;
+  color: #4f46e5;
+}
+.result-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.resume-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resume-btn:hover {
+  background: #4338ca;
+}
+/**/
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: white;
+  padding: 24px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.nav-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #c7d2fe;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.skill_asses_button {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #c7d2fe;
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.skill_asses_button.active,
+.skill_asses_button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.assessment-container {
+  padding: 40px;
+  background: radial-gradient(circle at top, #f8fafc, #eef2ff);
+  min-height: 100vh;
+}
+.assessment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.assessment-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.assessment-header p {
+  color: #64748b;
+}
+
+.skill-search {
+  padding: 10px 14px;
+  width: 220px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 24px;
+}
+.skill-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* .skill-icon {
+  width: 42px;
+  height: 42px;
+  background: #eef2ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+} */
+
+.skill-card h4 {
+  font-size: 15px;
+  margin-top: 0.83em;
+  margin-bottom: 0em;
+  
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;    
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.start-btn:hover {
+  opacity: 0.9;
+}
+.layout {
+  display: flex;
+}

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"> <defs> <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%"> <feGaussianBlur stdDeviation="4" result="blur" /> <feComposite in="SourceGraphic" in2="blur" operator="over" /> </filter> <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%"> <feGaussianBlur stdDeviation="6" result="blur" /> <feComposite in="SourceGraphic" in2="blur" operator="over" /> </filter>
+
+<linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+  <stop offset="0%" stop-color="#00f2ff" />
+  <stop offset="100%" stop-color="#0072ff" />
+</linearGradient>
+</defs>
+
+<g stroke="#00d2ff" stroke-width="0.5" opacity="0.2"> <line x1="280" y1="180" x2="320" y2="480" /> <line x1="480" y1="220" x2="120" y2="440" /> <line x1="120" y1="240" x2="480" y2="420" /> <line x1="280" y1="380" x2="320" y2="280" /> </g>
+
+<g stroke="#0072ff" stroke-width="1.5" stroke-opacity="0.4" fill="none"> <line x1="280" y1="180" x2="480" y2="220" /> <line x1="480" y1="220" x2="480" y2="420" /> <line x1="480" y1="420" x2="280" y2="380" /> <line x1="280" y1="380" x2="280" y2="180" /> </g>
+
+<g stroke="url(#grad-blue)" stroke-width="2" filter="url(#glow-blue)"> <line x1="120" y1="240" x2="280" y2="180" stroke-opacity="0.3" /> <line x1="320" y1="280" x2="480" y2="220" stroke-opacity="0.6" /> <line x1="320" y1="480" x2="480" y2="420" stroke-opacity="0.6" /> <line x1="120" y1="440" x2="280" y2="380" stroke-opacity="0.3" /> </g>
+
+<g stroke="url(#grad-blue)" stroke-width="3" filter="url(#glow-blue)" fill="none"> <polygon points="120,240 320,280 320,480 120,440" stroke-linejoin="round" /> </g>
+
+<g fill="#00f2ff" filter="url(#glow-blue)"> <circle cx="280" cy="180" r="4" opacity="0.5" /> <circle cx="480" cy="420" r="4" opacity="0.5" /> <circle cx="280" cy="380" r="4" opacity="0.5" /> <circle cx="120" cy="240" r="6" /> <circle cx="320" cy="280" r="7" /> <circle cx="320" cy="480" r="6" /> <circle cx="120" cy="440" r="6" /> </g>
+
+<g filter="url(#glow-purple)"> <circle cx="480" cy="220" r="8" fill="#ff00ff" /> <circle cx="480" cy="220" r="3" fill="#ffffff" /> </g> </svg>

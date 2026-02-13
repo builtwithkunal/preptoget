@@ -1,0 +1,138 @@
+.resume-container {
+  flex: 1;
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  padding: 30px 40px;
+}
+
+.resume-card {
+  background: white;
+  padding: 40px;
+  border-radius: 14px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+}
+
+.resume-card h2 {
+  margin-bottom: 10px;
+}
+
+.resume-card p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.resume-card input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.resume-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resume-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.skills-section {
+  margin-top: 30px;
+}
+
+.skill-tags span {
+  background: #e0e7ff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* dashboard button */
+.continue-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: #4338ca;
+}
+/**/
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: white;
+  padding: 24px;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.nav-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #c7d2fe;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.skill_asses_button {
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #c7d2fe;
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.skill_asses_button.active,
+.skill_asses_button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.headerr h2 {
+  font-size: 32px;
+  font-weight: 700;
+  
+}
+
+.resume-card {
+  margin: auto; 
+}
+.headerr {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.headerr h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
