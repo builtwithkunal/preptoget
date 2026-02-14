@@ -86,14 +86,21 @@
   align-items: right;
   
 }
-
-.top-actions {
+/*14feb mobile response chnge*/
+/* .top-actions {
   display: flex;
   gap: 1px;
   margin-left: 160px;
   align-items: right;
   
+} */
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
+
 
 .logout {
   background: #ef4444;
@@ -287,14 +294,14 @@
   color: #64748b;
 }
 
-
+/*14feb width chnge from 300px to 100%*/
 .gap-panel {
   background: white;
   border-radius: 16px;
   padding: 18px;
   margin-bottom: 18px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.06);
-  width: 300px;
+  width: 100%;
 }
 
 .gap-header {
@@ -346,3 +353,55 @@
   color: #334155;
 }
 /**/
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .dashboard-container {
+    padding: 16px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .score-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .score-right h3 {
+    font-size: 20px;
+  }
+
+  .score-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .top-actions {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+}
+

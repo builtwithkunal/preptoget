@@ -9,13 +9,35 @@ import { setAuthToken } from "../services/api";
 
 
 export default function Register() {
+  const [loading, setLoading] = useState(false);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
 
+  // const handleRegister = async () => {
+  //   try {
+  //     const res = await api.post("/users/register", {
+  //       email: email,
+  //       password: password,
+  //     });
+
+  //     const token = res.data.access_token;
+
+  //     localStorage.setItem("token", token);
+  //     setAuthToken(token);
+  //     navigate("/assessment"); // direct jump
+  //   } catch (err) {
+  //     alert("Registration failed");
+  //     console.error(err);
+  //   }
+  // };
+
   const handleRegister = async () => {
     try {
+      setLoading(true);
+
       const res = await api.post("/users/register", {
         email: email,
         password: password,
@@ -25,12 +47,15 @@ export default function Register() {
 
       localStorage.setItem("token", token);
       setAuthToken(token);
-      navigate("/assessment"); // direct jump
+      navigate("/assessment");
     } catch (err) {
       alert("Registration failed");
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
+
 
 
   return (
