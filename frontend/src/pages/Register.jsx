@@ -80,9 +80,10 @@ export default function Register() {
         </motion.div>
         <motion.button
           onClick={handleRegister}
+          disabled={loading}
           whileTap={{ scale: 0.97 }}
         >
-          Register
+          {loading ? "Creating account..." : "Register"}
         </motion.button>
         <p className="register-text">
           Already have an account?
