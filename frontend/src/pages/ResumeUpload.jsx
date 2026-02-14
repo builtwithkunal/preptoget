@@ -7,6 +7,8 @@ import { setAuthToken } from "../services/api";
 
 
 export default function ResumeUpload() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const [file, setFile] = useState(null);
   const [skills, setSkills] = useState([]);
   const [uploading, setUploading] = useState(false);
@@ -50,9 +52,13 @@ export default function ResumeUpload() {
   };
 
   return (
-    <div className="layout">
+    // <div className="layout">
+    <div className={`layout ${sidebarOpen ? "sidebar-open" : ""}`}>
+
           {/* LEFT SIDEBAR */}
-        <aside className="sidebar">
+        {/* <aside className="sidebar"> */}
+        <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
+
           <div className="brand">SR</div>
 
           <nav>
@@ -83,9 +89,22 @@ export default function ResumeUpload() {
             </div>
           </nav>
         </aside>
+        {sidebarOpen && (
+          <div
+            className="overlay"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
       <div className="resume-container">
         <div className="headerr">
-            <h2>Resume Analysis</h2>
+          <button
+            className="menu-btn"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+          >
+            ☰
+          </button>
+          <h2>Resume Analysis</h2>
         </div>
 
 

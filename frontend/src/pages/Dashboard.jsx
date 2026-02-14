@@ -129,7 +129,7 @@ export default function Dashboard() {
 
               
               <div className="score-circle">
-                <svg width="160" height="160" viewBox="0 0 160 160">
+                <svg viewBox="0 0 160 160">
                   {/* background 3/4 arc */}
                   <circle
                     cx="80"
@@ -137,7 +137,7 @@ export default function Dashboard() {
                     r="58"
                     fill="none"
                     stroke="#e5e7eb"
-                    strokeWidth="17"
+                    strokeWidth="14"
                     strokeLinecap="round"
                     strokeDasharray="282 377"
                     transform="rotate(135 80 80)"
@@ -150,12 +150,15 @@ export default function Dashboard() {
                     r="58"
                     fill="none"
                     stroke="#8b8cfb"
-                    strokeWidth="17"
+                    strokeWidth="14"
                     strokeLinecap="round"
                     strokeDasharray="282 377"
                     strokeDashoffset={
                       282 - (282 * data.role_readiness_score) / 100
                     }
+                    style={{
+                      transition: "stroke-dashoffset 0.6s ease"
+                    }}
                     transform="rotate(135 80 80)"
                   />
                 </svg>

@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Assessment() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const [search, setSearch] = useState("");
   const [skills, setSkills] = useState([]);
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -48,9 +50,13 @@ export default function Assessment() {
   };
 
   return (
-    <div className="layout">
+    // <div className="layout">
+    <div className={`layout ${sidebarOpen ? "sidebar-open" : ""}`}>
+
         {/* LEFT SIDEBAR */}
-        <aside className="sidebar">
+        {/* <aside className="sidebar"> */}
+        <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
+
           <div className="brand">SR</div>
 
           <nav>
@@ -81,6 +87,14 @@ export default function Assessment() {
             </div>
           </nav>
         </aside>
+
+        {sidebarOpen && (
+          <div
+            className="overlay"
+            onClick={() => setSidebarOpen(false)}
+          />
+        )}
+
       <div className="assessment-container">
 
         
@@ -90,6 +104,13 @@ export default function Assessment() {
           <div className="skill-select">
             
             <div className="assessment-header">
+              <button
+                className="menu-btn"
+                onClick={() => setSidebarOpen(!sidebarOpen)}
+              >
+                ☰
+              </button>
+
               <div>
                 <h2>Skill Assessment</h2>
                 <p>Select a skill to begin your evaluation.</p>
