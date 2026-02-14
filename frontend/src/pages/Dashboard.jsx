@@ -4,6 +4,8 @@ import "./Dashboard.css";
 
 
 export default function Dashboard() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const [role, setRole] = useState("Python Developer");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -54,10 +56,14 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="layout">
+    // <div className="layout">
+    <div className={`layout ${sidebarOpen ? "sidebar-open" : ""}`}>
+
 
         {/* LEFT SIDEBAR */}
-        <aside className="sidebar">
+        {/* <aside className="sidebar"> */}
+        <aside className={`sidebar ${sidebarOpen ? "show" : ""}`}>
+
           <div className="brand">SR</div>
 
           <nav>
@@ -85,9 +91,22 @@ export default function Dashboard() {
             </div>
           </nav>
         </aside>
+        {sidebarOpen && (<div className="overlay" onClick={() => setSidebarOpen(false)}></div>)}
       <div className="dashboard-container">
        
         <div className="top-bbar">
+
+          <button 
+            className="menu-btn"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            
+
+          >
+            ☰
+          </button>
+
+
+
           <h2 className="page-title">Dashboard</h2>
 
           <div className="profile-box">
